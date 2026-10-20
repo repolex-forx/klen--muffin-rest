@@ -1,1 +1,149 @@
-Initializing
+# Repolex Knowledge Graph of klen/muffin-rest
+
+RDF knowledge graph data for [klen/muffin-rest](https://github.com/klen/muffin-rest), parsed by [repolex](https://repolex.ai).
+
+> **Note**: This data is experimental and subject to change without notice.
+
+## How to use this data
+
+The easiest way to get started is to install the [rlex](https://github.com/repolex-ai/rlex) query tool:
+
+```bash
+cargo install --git https://github.com/repolex-ai/rlex
+```
+
+Verify the install:
+
+```bash
+rlex --help
+```
+
+**rlex is designed to be used primarily by LLMs in a terminal.** Start up your favorite AI assistant and ask it to use rlex. It handles the SPARQL — you just ask questions in plain English.
+
+To load this repo's data:
+
+```bash
+rlex download klen/muffin-rest
+```
+
+Consult `rlex --help` for other options, including SPARQL queries, HTTP server, and interactive visualization.
+
+## Data structure
+
+All data is stored as gzip-compressed [N-Quads](https://www.w3.org/TR/n-quads/) (`.nq.gz`), a standard RDF format that can be loaded into any triplestore or graph database.
+
+```
+.
+├── aggregate
+│   ├── ast
+│   │   └── f2298d12e0772265c337f55dfdcb9a2d81f81ef5
+│   │       └── chunk-001.nq.gz
+│   └── repolex
+│       └── f2298d12e0772265c337f55dfdcb9a2d81f81ef5
+│           └── chunk-001.nq.gz
+├── blob
+│   ├── 0142bca04e0e6197d777d577972680f00a82a70f.nq.gz
+│   ├── 0a6ee958310ca78a98bf4803c291d5898c7fd5b4.nq.gz
+│   ├── 0abe484c8741c99d8f783e79d669d265de1a9f84.nq.gz
+│   ├── 0b2e907c89333ea1b1c45cf476f5afdd63c69c08.nq.gz
+│   ├── 0c95cb4b9d0a3e48ca5dcb424c7d9b950e88f026.nq.gz
+│   ├── 10485d35f02e6ff73caa388ed6e17919736d379b.nq.gz
+│   ├── 1ccaa05cb75a15b6b34fe6df8424f1c3f6478cfd.nq.gz
+│   ├── 217078bdaedc47f5967e29fb780e9f62fb6dd0ba.nq.gz
+│   ├── 23c5c150f58bdd129447223d88288e859f8cccb1.nq.gz
+│   ├── 320ffb01b94d7d7a0f3528d2c70c371d99c8a972.nq.gz
+│   ├── 355f9bea5b44bbaf972d89d4366900b1b5ab7db0.nq.gz
+│   ├── 389888d061b8af251f8f98b48255ab2a6642233c.nq.gz
+│   ├── 3cc42b6265be099fabf0a4fee3127e313158bdde.nq.gz
+│   ├── 40307f0514db2d9a5997535f8ee767b3815d386f.nq.gz
+│   ├── 45207c6d680f0044d474822f6de73ee9207958ee.nq.gz
+│   ├── 47d7314bf95bc93099a13233dd2bb0ffa0c61d5a.nq.gz
+│   ├── 508ed981e6a5421684c7c766ada1bbabf30e56af.nq.gz
+│   ├── 54ec8b03ca3fc95f76293fbe8b0b10e96ff43729.nq.gz
+│   ├── 5e37da634c77eb32a1a8d44f01fbdad0afcedd22.nq.gz
+│   ├── 5f1d5686f3dc12105665875988bbe0b90d32c2bc.nq.gz
+│   ├── 6113b3d274913b1a3973662615cd71e568af0bf6.nq.gz
+│   ├── 61d52be4bb70b73fbc8f36ef9a445e63fec88082.nq.gz
+│   ├── 63fde9de8c1ff4a24eb9ec086ca6beaa41f22766.nq.gz
+│   ├── 6478ea51e7b1757c13eda8bd13911fbe5d0b8a34.nq.gz
+│   ├── 663170bae8cefa9310058eaa0c10172d0ad94362.nq.gz
+│   ├── 666ce2a519fd8f0c3599a11f968422b82612ca92.nq.gz
+│   ├── 690bcf32b55f63a391c9f9a1688194f97c7f9a4b.nq.gz
+│   ├── 6b78561ff58ab0aeff1f41a1f8e2b84ab3c5456d.nq.gz
+│   ├── 6e1f25e651cc7ce29a633d2bfd761c211f3d7417.nq.gz
+│   ├── 73a1552e629f7da470a55d41d1017396490f1d0f.nq.gz
+│   ├── 78df056a6afd6b2f7c5a8695635380a19f30acd9.nq.gz
+│   ├── 797da2d617e6818ef2af6204519c21f800cb0b9e.nq.gz
+│   ├── 7a3f07ab83552f47a8705fa5d22729a324a2f71a.nq.gz
+│   ├── 8073cc07bf405f127c8ef7b8311637ef31bc5c68.nq.gz
+│   ├── 80a4313b7d55ec56425a2a2cf0c1e406ba3d7117.nq.gz
+│   ├── 81e5a8cb112d5ba78ee6429e38f3f59f67ee89a7.nq.gz
+│   ├── 83e8aedfe41f3d2382613b0722e92ece06a98d26.nq.gz
+│   ├── 85f284a44771e5d9b79a39562d254f1851551d37.nq.gz
+│   ├── 8a283144b98af4ac7034acf8015b06ab3531d94d.nq.gz
+│   ├── 8af0607bea0a4dd7a72879c663c0079fa3c7124c.nq.gz
+│   ├── 8f7a6262edf3c192340e7234c1034d7ecf1662c0.nq.gz
+│   ├── 8f8b94d11e071a707b40dd5619973a69d261ff78.nq.gz
+│   ├── 9143d4a40e52b3abbc5b9c66cbe3374cfdd1f20e.nq.gz
+│   ├── 9a9ebaa4ebde37bbea2b154b7a38520c3e3dfaca.nq.gz
+│   ├── 9df55f6955fd4418cca8c11facab73ce80d63264.nq.gz
+│   ├── a02228bf12255aaa672a35d66b3fe147466cdecc.nq.gz
+│   ├── a1e764e7c76d16c03981c406e1dc136a3725110b.nq.gz
+│   ├── a5d305c91823b7027ed841b03a9d3cfa866457a4.nq.gz
+│   ├── a99a842350d56adca35c56e543918b4f0a21d979.nq.gz
+│   ├── ab2a2be00e6e294bbd4eda35fc9925bf00048477.nq.gz
+│   ├── ad184416f040196378622e0dc42d7136f15aebd9.nq.gz
+│   ├── b9119a72ccbcd62b942eabea315e2fcfe7c16ce3.nq.gz
+│   ├── c1ce46bf0d8bfb36185121e31d743fcd714936c0.nq.gz
+│   ├── c6d8025b886f4d1b19eaea111a91e263a72afb76.nq.gz
+│   ├── c7a27d85f20ce81d0f12b567f91b3e9bc68274f0.nq.gz
+│   ├── cc16c8ef188b7f110e0ec3ee931af0000e6a946e.nq.gz
+│   ├── ce48f87110f5a00c4f3320f9ed0c8e630cb23daf.nq.gz
+│   ├── d1b00e39a51cc84a5c2ff7724b0334062b03922e.nq.gz
+│   ├── d249c6322f70d0c8aa718a2fc39617a359be33b9.nq.gz
+│   ├── d4727722d6ae70c781975f46ebed6137268d4e82.nq.gz
+│   ├── d7870ea0b6d8add43a735e8ef04596a1133a171e.nq.gz
+│   ├── df8de1ed19ddc28524cec91b3157328e3533eb30.nq.gz
+│   ├── e5a7ead486076ed59b00e271315a822b3d6cfd8d.nq.gz
+│   ├── e69de29bb2d1d6434b8b29ae775ad8c2e48c5391.nq.gz
+│   ├── e728d03676c20ba87a39556e60b642f5df17ebde.nq.gz
+│   ├── ed47b995080fb56afeb8f3589e29442ef7ce90a4.nq.gz
+│   ├── f55344b06c2ba5d13928752beb614746d8153462.nq.gz
+│   ├── f7a98cdd97cd45ddc08a84dee64c5b0f42805276.nq.gz
+│   ├── fd8047b5dfa45ab9b1dbcfa858f5fc9c7d072aff.nq.gz
+│   └── fd8a49617b773900ab58a775b9972bb18d45aae1.nq.gz
+├── branch
+│   └── branch.nq.gz
+├── commit
+│   └── commit.nq.gz
+├── filetree
+│   └── f2298d12e0772265c337f55dfdcb9a2d81f81ef5.nq.gz
+├── issue
+│   └── issue.nq.gz
+├── pr
+│   └── pr.nq.gz
+└── tag
+    └── tag.nq.gz
+
+13 directories, 78 files
+```
+
+| Directory | What it contains |
+|-----------|-----------------|
+| `blob/` | Per-file AST graphs, content-addressed by git blob SHA. Each file in the source repo gets its own graph. |
+| `aggregate/ast/` | Combined AST graph per parsed commit. Merges all blob graphs for a snapshot of the entire codebase at that point. |
+| `aggregate/lsp/` | Language Server Protocol enrichment: resolved symbols, definitions, references, and type information. |
+| `aggregate/dataflow/` | Interprocedural data flow edges between functions and modules. |
+| `aggregate/repolex/` | Combined graph (AST + LSP + dataflow) per commit. |
+| `commit/` | Git commit metadata (author, date, message, parent links). |
+| `branch/` | Branch metadata. |
+| `tag/` | Tag metadata. |
+| `filetree/` | File tree snapshots per commit (which files existed and their blob SHAs). |
+| `audit/` | Code architecture and graph audit reports per commit. |
+
+## Source repository
+
+[klen/muffin-rest](https://github.com/klen/muffin-rest)
+
+---
+*Parsed on 2026-10-20 by [repolex](https://repolex.ai)*

@@ -1,0 +1,11 @@
+{
+  "org": "klen",
+  "repo": "muffin-rest",
+  "versions": [
+    {
+      "commit": "f2298d12e0772265c337f55dfdcb9a2d81f81ef5",
+      "tag": "14.2.1",
+      "parsed_at": "2026-10-20T22:05:54.251677+00:00"
+    }
+  ]
+}
